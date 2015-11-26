@@ -19,7 +19,6 @@ class HackBoy9001Shell(cmd.Cmd):
         (console_width, console_height) = terminalsize.get_terminal_size()
         if len(self.wordlist) > 0:
             word_length = max([len(word) for word in self.wordlist]) + 1
-            print word_length
             columns = console_width / word_length
             for index, word in enumerate(self.wordlist):
                 if (index+1) % columns == 0:
