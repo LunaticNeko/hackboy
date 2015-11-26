@@ -33,7 +33,7 @@ Note that all words are automatically converted to UPPERCASE, as with RobCo TERM
 
 You are provided with the following word list from RobCo Terminal:
 ```
-BELAUDS ARRAYER METAGES BEEBEES BECLOUD UNFADED GREASED MENACED REKEYED DELUDER GELANTS SENATES
+COMPANY TRAPANS QUAMASH CULMING ETAMINE OUTMANS PLAYACT CLEWING COURANT ABEYANT CHAMOIX ALIMENT
 ```
 
 You should start Hack-Boy 9001 using:
