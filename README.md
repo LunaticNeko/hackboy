@@ -1,7 +1,7 @@
 # hackboy
 Hack-Boy 9001 is a cryptanalytic toolkit for RobCo TERMLINK systems. Also known as Hacking in Fallout 3, New Vegas, and 4.
 
-Developed by NeCo Corporation, provided to you by C.I.T. License. (4thwall: MIT License)
+Developed by NeCo Corporation, provided to you under the C.I.T. License. (4thwall: MIT License)
 
 ## Requirements
 * A terminal or PC (Hack-Boy 9001 is not yet available in holotape format.)
