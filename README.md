@@ -80,3 +80,10 @@ If you can find a matching pair between the parentheses or braces on the same me
 match them and either have one dud removed from the RobCo terminal (an action you can reflect in Hack-Boy using the d command) or
 additional try quota can be given.
 
+## Shout-outs
+
+* If you do not have a RobCo terminal at hand, you can practice using an emulator at http://mitchellthompson.net/demos/terminal/
+* I took KeyboardInterrupt handling from [SO::8813291](http://stackoverflow.com/questions/8813291/better-handling-of-keyboardinterrupt-in-cmd-cmd-command-line-interpreter)
+* Bethesda Softworks, Bethesda Game Studios, Obsidian Entertainment for Fallout 3, NV, and 4 that featured RobCo terminals in their current form
+* Interplay and Black Isle Studios for the inception, development, and publishing of early Fallout games
+* I was personally inspired by [that lazy Russian guy](https://github.com/NARKOZ/hacker-scripts) who used a machine to send an excuse to his wife, lie to his boss, auto-rollback a client's database, and makes coffee remotely, done right when he makes it to the coffee machine.
