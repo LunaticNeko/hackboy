@@ -12,6 +12,27 @@ def similarity(a,b):
 def similarity_search(words, a, s):
     return [word for word in words if similarity(a, word) == s]
 
+def check(word, words):
+    """Prints a detailed analysis of a word."""
+    similarities = zip(words, [similarity(word, w) for w in words])
+    S = [[] for i in range(len(word)+1)]
+    for s in similarities:
+        S[s[1]].append(s[0])
+    return S
+
+def maxmatch(word, words):
+    """Based on the check() function, return the maximum number of matches
+       for a given word."""
+    C = check(word, words)
+    return max([len(c) for c in C])
+
+def best_candidate(words):
+    """Returns the best candidates to search"""
+    matches = [None]*len(words)
+    for index, word in enumerate(words):
+        matches[index] = maxmatch(word, words)
+    return sorted(zip(matches, words))
+
 class HackBoy9001Shell(cmd.Cmd):
     wordlist = []
     def printwords(self):
@@ -83,6 +104,24 @@ class HackBoy9001Shell(cmd.Cmd):
             raise Exception
         print similarity(args[0], args[1])
 
+    def do_check(self, args):
+        """c[heck] WORD
+           Analyze the word's similarity to others."""
+        args = args.upper().split(' ')
+        C = check(args[0], self.wordlist)
+        for i in range(1,len(word)):
+            print "%d: %s" % (i, C[i])
+
+    def do_best(self, args):
+        """b[est]
+           Find the best word. The best word is the word that, even if we're so
+           unlucky and leave behind the largest number of remaining candidates,
+           that remaining number will still be small. A.k.a. Minimax.
+
+           If there are many candidates, we will print just one."""
+        B = min(best_candidate(self.wordlist))
+        print B[1]
+
     def do_clihelp(self, args):
         """[cli]help
            Command-Line Interface is not yet implemented.
@@ -136,7 +175,7 @@ class HackBoy9001Shell(cmd.Cmd):
             ''','''\
             (also known outside the Commonwealth as MIT License)
             ''','','''\
-            Copyright (c) 2015 Chawanat Nakasan
+            Copyright (c) 2015-2017 Chawanat Nakasan
             ''','','''\
             Permission is hereby granted, free of charge, to any person obtaining a copy
             of this software and associated documentation files (the "Software"), to deal
@@ -165,16 +204,18 @@ class HackBoy9001Shell(cmd.Cmd):
             ''']:
             print textwrap.fill(textwrap.dedent(par), console_width)
 
-    do_n = do_new
     do_a = do_add
-    do_t = do_try
+    do_b = do_best
+    do_c = do_check
     do_d = do_dud
     do_l = do_list
     do_ls = do_list
+    do_n = do_new
+    do_q = do_quit
     do_s = do_sim
+    do_t = do_try
     do_cli = do_clihelp
     do_api = do_apihelp
-    do_q = do_quit
 
 def main():
     print "Welcome to HACK-BOY 9001 (Interactive Mode)"
