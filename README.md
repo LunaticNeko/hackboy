@@ -20,6 +20,7 @@ Currently, CLI and API mode are not implemented. We have no schedule for Graphic
 
 * new (or n): Start a new hacking session, clears all existing candidate word list from memory.
 * add WORD WORD2 ... (or a): Add one or more words to the candidate word list. You usually copy a list of words from the RobCo machine.
+* best WORD (or b): Automatically find the best word. Best word means the word that will, at worst, give as few candidates remaining as possible. In case of a tie, one will be chosen.
 * try WORD SIMILARITY (or t): Record a hack attempt. Similarity is the number of matching characters provided by the RobCo machine.
 * dud WORD WORD2 ... (or d): Delete one or more words from the candidate word list. You probably don't need this, but I'm providing this functionality just in case.
 * sim WORD WORD2 (or s): Test similarity between two and only two words.
