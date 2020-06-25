@@ -87,4 +87,4 @@ additional try quota can be given.
 * I took KeyboardInterrupt handling from [SO::8813291](http://stackoverflow.com/questions/8813291/better-handling-of-keyboardinterrupt-in-cmd-cmd-command-line-interpreter)
 * Bethesda Softworks, Bethesda Game Studios, Obsidian Entertainment for Fallout 3, NV, and 4 that featured RobCo terminals in their current form
 * Interplay and Black Isle Studios for the inception, development, and publishing of early Fallout games
-* I was personally inspired by [that lazy Russian guy](https://github.com/NARKOZ/hacker-scripts) who used a machine to send an excuse to his wife, lie to his boss, auto-rollback a client's database, and makes coffee remotely, done right when he makes it to the coffee machine.
+* I was personally inspired by [that lazy Russian guy](https://github.com/NARKOZ/hacker-scripts) who used a machine to send an excuse to his wife, lie to his boss, auto-rollback a client's database, and make coffee remotely, done right when he makes it to the coffee machine.
